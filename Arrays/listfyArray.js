@@ -31,7 +31,12 @@ const myFormat4 = new Intl.ListFormat('en', formatOptions4); //Apple, Mango, Ora
 let formatted1 = myFormat1.format(fruits);
 let formatted2 = myFormat2.format(fruits);
 let formatted3 = myFormat3.format(fruits);
+let formatted4 = myFormat4.format(fruits);
 
-console.log(formatted1);
-console.log(formatted2);
-console.log(formatted3);
+console.log("formatted1::", formatted1);
+console.log("formatted2::", formatted2);
+console.log("formatted3::", formatted3);
+console.log("formatted4::", formatted4);
+
+// simple solution for format4 
+console.log("Simple solution", String(fruits)) //Apple, Mango, Orange, Banana,Pineapple

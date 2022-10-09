@@ -43,6 +43,8 @@ let participantsForDVLA = [];
 
 const byFirstNames = (p1, p2) =>
   p1.person.firstNames.localeCompare(p2.person.firstNames);
+
+
 const byLastAuthDriver = (
   p1,
   p2,
