@@ -14,3 +14,4 @@ const arr = Object.entries(X).map(([key, value], index) => {
 const vals = Object.values(X)
 console.log('arr  :::->>>', arr);
 console.log('vals  :::->>>', vals);
+

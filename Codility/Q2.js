@@ -28,6 +28,7 @@ const solution = (num1, num2) => {
     }
     console.log('min  :::->>>', min);
     console.log('max  :::->>>', max);
+
     // while (num1 < num2) {
     //     console.log('num1  :::->>>', num1);
     //     if (isPrime(num1)) { console.log(num1) }
@@ -39,5 +40,5 @@ const solution = (num1, num2) => {
 
 }
 
-const res = solution(4, 64)
+const res = solution(4, 10)
 console.log('res  :::->>>', res);

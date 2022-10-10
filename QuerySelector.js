@@ -7,6 +7,8 @@
 
 // const ById = document.querySelectorAll("#row-id ul li");
 // console.log(ById.lastChild);
+
+
 [...document.querySelectorAll("[data-codelist='Romany'] label")].map(label => {
   return [label.getAttribute("for"), label.textContent];
 });

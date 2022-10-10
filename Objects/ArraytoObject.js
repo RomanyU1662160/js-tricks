@@ -26,13 +26,23 @@ const myObjWithDestructure = { ...arr }
 
 // ------------------------------------------------------------------------------------------------------------
 
-const arr2 = [[{ fruit1: "apple" }], [{ fruit2: "mango" }], [{ fruit3: "orange" }]]
-let useReducerObj = {}
-arr2.reduce((acc, curr) => {
-    console.log('curr  :::->>>', curr);
-    return Object.assign(useReducerObj, ...curr)
-}, 0)
 
+// map an array oaf objects to object
 
+const users = [
+    { id: 123, name: "dave", age: 23 },
+    { id: 456, name: "chris", age: 23 },
+    { id: 789, name: "bob", age: 23 },
+    { id: 101, name: "tom", age: 23 },
+    { id: 102, name: "tim", age: 23 }
+]
 
-console.log('useReducerObj  :::->>>', useReducerObj);
+const mapArrayToObject = (arr) => {
+    return arr.reduce((obj, item) => {
+        obj[item.id] = item
+        return obj
+    }, {})
+}
+
+const arrayToObject = mapArrayToObject(users)
+console.log('arrayToObject  :::->>>', arrayToObject);

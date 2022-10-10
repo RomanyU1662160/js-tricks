@@ -7,28 +7,55 @@ answer [0,1]
 */
 
 
-const exampleArr = [5, 1, 3, 7, 8, 10]
-target = 15
+const exampleArr = [2, 5, 4, 6]
+target = 9
 
 
-
-const solution = (arr) => {
-    let res = []
-    let length = arr.length;
-
-    for (let i = 0; i < length; i++) {
-        const subArray = arr.filter((N => N !== i))
-        console.log('subArray  :::->>>', subArray);
-        for (let T = 0; T < subArray.length; T++) {
-            if (T + i == target) {
-                return res = [...res, arr.indexOf(i), arr.indexOf(T)]
-            }
+const solution = (arr, target) => {
+    let res = [];
+    arr.map(element => {
+        const subArray = exampleArr.filter(N => N != element)
+        const founded = subArray.find(num => num + element == target)
+        if (founded) {
+            res = [arr.indexOf(founded), arr.indexOf(element)]
         }
-
-
-    }
-    return [... new Set(res)]
+    });
+    return res
 }
-const mySolution = solution(exampleArr)
+
+
+/*
+Best and simple
+*/
+
+const solution2 = (arr, target) => {
+    let res;
+    arr.map((num, index) => {
+        const neededValue = target - num
+        arr.includes(neededValue) ? res = [arr.indexOf(neededValue), index] : []
+    }
+    )
+    return res
+}
+
+
+const mySolution = solution(exampleArr, 9)
+const mySolution2 = solution2(exampleArr, 9)
 
 console.log('mySolution  :::->>>', mySolution);
+console.log('mySolution 2 :::->>>', mySolution2);
+
+
+const res1 = sum(10, 20);
+console.log('diff  :::->>>', diff);
+const res2 = diff(10, 20);
+function sum(x, y) {
+    return x + y
+}
+
+let diff = function (x, y) {
+    return x - y
+}
+
+console.log('res1  :::->>>', res1);
+console.log('res2  :::->>>', res2);
