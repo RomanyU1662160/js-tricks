@@ -42,3 +42,21 @@ const solution = (num1, num2) => {
 
 const res = solution(4, 10)
 console.log('res  :::->>>', res);
+
+const findGreaterCommonDivider = (num1, num2) => {
+    const min = Math.min(num1, num2);
+    const max = min === num1 ? num2 : num1
+    if (max % min === 0) {
+        return min
+    }
+    console.log('min  :::->>>', min);
+    console.log('max  :::->>>', max);
+
+    let init = min;
+    while (init > 0) {
+        if (min % init === 0 && max % init === 0) {
+            return init
+        }
+        init--
+    }
+}

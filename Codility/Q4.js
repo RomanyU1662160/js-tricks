@@ -26,11 +26,12 @@ console.log('solution2  :::->>>', solution2);
 const res1 = sum(10, 20);
 
 const res2 = diff(10, 20);
+
 function sum(x, y) {
     return x + y
 }
 
-let diff = function (x, y) {
+function diff(x, y) {
     return x - y
 }
 
