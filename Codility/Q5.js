@@ -18,15 +18,15 @@ after the third jump, at position 10 + 30 + 30 + 30 = 100
 */
 
 const solution = (x, y, d) => {
-    const requiredDistance = y - x
-    const numberOfJumps = requiredDistance / d
-    console.log('numberOfJumps  :::->>>', numberOfJumps);
-    const result = Math.ceil(numberOfJumps)
-    return result
+  const requiredDistance = y - x
+  const numberOfJumps = requiredDistance / d
+  console.log('numberOfJumps  :::->>>', numberOfJumps);
+  const result = Math.ceil(numberOfJumps)
+  return result
 }
 
 const solution2 = (x, y, d) => {
-    return Math.ceil((x - (y / d)))
+  return Math.ceil((x - (y / d)))
 }
 
 
