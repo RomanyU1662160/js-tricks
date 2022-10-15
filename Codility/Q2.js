@@ -14,8 +14,6 @@ const isPrime = (N) => {
         }
         init++
     }
-
-
 }
 
 console.log('isPrime  :::->>>', isPrime(10));

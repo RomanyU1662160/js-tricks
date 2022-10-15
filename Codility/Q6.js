@@ -19,7 +19,7 @@ const arr = [1, 2, 3, 5]   // 4
 const solution = (arr) => {
     if (arr.length == 1) { return arr[0] }
     let res;
-    const sorted = arr.sort((a, b) => a > b ? 0 : -1)
+    const sorted = arr.sort((a, b) => a - b)
     sorted.some(num => {
         const isExist = sorted.includes(num + 1)
         if (!isExist) res = num + 1
