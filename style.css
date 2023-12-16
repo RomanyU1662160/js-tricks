@@ -1,29 +1,31 @@
-:root{
---box-color: brown;
---prefer-width:100%;
---font-size:5px;
+:root {
+    --box-color: brown;
+    --prefer-width: 100%;
+    --font-size: 5px;
 }
 
-.container{
-margin: 1%;
+.container {
+    margin: 1%;
+    padding: 1%;
+    background-color: red
 }
 
-.grid-example{
-display: grid;
-grid-template-columns: 20% 50% 30%; 
-grid-template-rows: 50% 50% 
+.grid-example {
+    display: grid;
+    grid-template-columns: 20% 50% 30%;
+    grid-template-rows: 50% 50%
 }
 
 .box {
-border:  1px solid white;
-background-color: var(--box-color) ;
+    border: 1px solid white;
+    background-color: var(--box-color);
 
-color: white;
-font-size: 3rem;
-width: 100%;
+    color: white;
+    font-size: 3rem;
+    width: 100%;
 }
 
-    
+
 /* @media only screen and (max-width:1200px ) {
     .box{ 
 background-color: blue;
