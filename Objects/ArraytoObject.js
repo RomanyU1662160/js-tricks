@@ -4,7 +4,7 @@ const nums = [1, 2, 3, 4, 5, 6]
 // solution 1   simple and best
 const myObj = Object.assign({}, ...arr);
 const myObj2 = Object.assign({}, nums)
-// console.log('myObj  :::->>>', myObj);
+console.log('myObj  :::->>>', myObj);
 // console.log('myObj2  :::->>>', myObj2);
 
 // ------------------------------------------------------------------------------------------------------------
@@ -39,6 +39,7 @@ const users = [
 
 const mapArrayToObject = (arr) => {
     return arr.reduce((obj, item) => {
+        console.log('item', item);
         obj[item.id] = item
         return obj
     }, {})
