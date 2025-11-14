@@ -13,3 +13,9 @@ const findDupliation = (numbers: Array<number>): boolean =>{
   const filtered = new Set(numbers)
    return filtered.size < numbers.length  
 }
+
+
+// another clever solution 
+const findDuplication = (numbers: Array<number>): boolean => {
+  return numbers.some((num, index) => numbers.indexOf(num) !== index
+)}
