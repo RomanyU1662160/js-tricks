@@ -6,4 +6,10 @@ const uniqueArr = [...new Set(arr)]   // create a new set and use spread operato
 
 
 
+
 console.log('uniqueArr  :::->>>', uniqueArr);
+
+const findDupliation = (numbers: Array<number>): boolean =>{
+  const filtered = new Set(numbers)
+   return filtered.size < numbers.length  
+}
