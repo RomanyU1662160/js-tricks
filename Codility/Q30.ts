@@ -8,9 +8,6 @@ const findRepeatedLength = (arrays: number[][]) => {
   const concatenated = concat(...arrays)
   const grouped = groupBy(concatenated, Math.floor)
   let res: Record<string, number> = {}
-  //  Object.entries(grouped).forEach(([key, value]) => {
-  //     res[key] = value.length;
-  //   });
 
   Object.entries(grouped).forEach(([key, value]) => {
     if (Array.isArray(value)) res[key] = value.length
